@@ -1,0 +1,37 @@
+###############################################################################
+# Title: Deduplication Script
+# Description: Removes duplicate citations obtained in the literature search
+# Project: AI versus Human Screening
+###############################################################################
+
+# ------------------------------- #
+# 1. Load Library and Data
+# ------------------------------- #
+
+library(ASySD)
+
+combined <- load_search("C:/combined.ris", method="ris")
+
+# ------------------------------- #
+# 2. Deduplication
+# ------------------------------- #
+
+# Automated deduplication
+results <- dedup_citations(combined, merge_citations = TRUE)
+unique_citations <- results$unique
+
+# Manual deduplication
+manual_review <- manual_dedup_shiny(results$manual_dedup) #Opens a browser window for manual deduplication
+
+# Produce the final deduplicated dataset
+final_results <- dedup_citations_add_manual(results$unique, additional_pairs = manual_review)
+
+# Export the final deduplicated dataset
+write_citations(final_results, type="ris", filename="C:/final_results.ris") #Import this .ris file to covidence
+
+write.csv(final_results, "C:/final_results.csv", row.names=FALSE)
+
+# Create "reduced" dataset with articles not missing abstracts
+reduced<-final_results[!is.na(final_results$abstract),]
+
+# End of Program #

@@ -7,6 +7,8 @@ This repository contains the following files:
 
 File contents are summarized below.
 
+<br>
+
 ## CSV Files
 
 1. Catchii_Title_Abstract_Screening_Results.csv
@@ -15,7 +17,7 @@ File contents are summarized below.
 
 These files contain the following information:
 
-1. Numberedstep
+1. Article titles, authors, year of publication, included or excluded, reasons for inclusion or exclusion, confidence level of decision (Loon Lens only)
 2. Another step
 
 

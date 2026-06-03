@@ -28,7 +28,9 @@ These files contain the following information: article titles, authors, years of
 1. Confidence Concordance Regression: simple logistic regression of concordance on Loon Lens confidence scores;
 2. Deduplication Script: use of R's ASySD library to remove duplicate citations obtained in the literature search;
 3. Figure 3: generation of forest plots to show reliability statistics for title and abstract screening; and
-4. Full Text Screening Comparison: all analyses for the full-text comparison of Loon Lens versus human screening, except confidence_concordance regression (title and abstract screening analyses utilized the same code).
+4. Full Text Screening Comparison: all analyses for the full-text comparison of Loon Lens versus human screening, except confidence-concordance regression
+
+Title and abstract screening analyses utilized the same code as shown in the Full_Text_Screening_Comparison.R file.
 
 
 Regular paragraph text here.

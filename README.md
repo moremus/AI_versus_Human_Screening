@@ -1,5 +1,9 @@
 # AI versus Human Screening GitHub Files
 
+<br>
+
+## Overview
+
 This repository contains the following files:
 
 * CSV files from the screening process; and
@@ -15,10 +19,13 @@ File contents are summarized below.
 2. Loon_Lens_Full_Text_Screening_Results.csv
 3. Loon_Lens_Title_Abstract_Screening_Results.csv
 
-These files contain the following information:
+These files contain the following information: article titles, authors, years of publication, journals, DOIs, included or excluded, reasons for inclusion or exclusion, and confidence level of inclusion/exclusion decisions (Loon Lens only)
 
-1. Article titles, authors, year of publication, included or excluded, reasons for inclusion or exclusion, confidence level of decision (Loon Lens only)
-2. Another step
+<br>
+
+## R Programs
+
+1. Deduplication_Script: 
 
 
 Regular paragraph text here.

@@ -38,11 +38,11 @@ doc <- read.csv("C:/full_text_document.csv")
 # 3. Format Variables
 # ------------------------------- #
 
-# Create Gold variable
+# Create Gold Standard Variable
 doc$Gold <- factor(doc$Human, levels = c(1,0))
 label(doc$Gold) <- "Human Screening"
 
-# Create concordance variable
+# Create Concordance Variable
 doc$Concordance <- ifelse(doc$Human != doc$Loon.Lens, 1,0)
 doc$Concordance <- factor(doc$Concordance, levels = c(1,0), labels = c("Disagree","Agree"))
 
@@ -68,7 +68,7 @@ doc |>
     title=md("**Table 2.** Confusion Table")
   )
 
-## Put the Table in a Dataframe (needed to get the comparative statistics)
+## Put the Table in a Dataframe (for comparative statistics)
 Human<-c("Included", "Included", "Excluded", "Excluded")
 Loon.Lens<-c("Included", "Excluded", "Included", "Excluded")
 count<-c(41, 2, 11, 8)
@@ -128,10 +128,6 @@ bootstrap_acc <- function(splits) {
 bootstrap_kap <- function(splits) {
   x <- analysis(splits)
   kap(x, truth = Human, estimate = Loon.Lens, estimator = "binary", event_level = "first")$.estimate
-}
-bootstrap_f1 <- function(splits) {
-  x <- analysis(splits)
-  f_meas(x, truth = Human, estimate = Loon.Lens, beta = 1, estimator = "binary", event_level = "first")$.estimate
 }
 
 bootstrap_data <- bootstrap_data %>% 
@@ -194,7 +190,7 @@ boot_f1 <- function(data, indices) {
   2 * (precision * recall) / (precision + recall)
 }
 
-results <- boot(dataset, boot_f1, R = 2000) # R is the number of resamples to calculate the bootstrap CI; change 2000 to whatever you are doing for the other CIs
+results <- boot(dataset, boot_f1, R = 1000) # R is the number of resamples to calculate the bootstrap CI
 
 boot.ci(results, type = "perc")
 
@@ -266,8 +262,6 @@ radarchart(
   caxislabcol = "black",
   title = "Figure 1. Summary of Performance Metrics"
 )
-
-glcol = "black", cglty = 1, cglwd = 1,
   
 # ------------------------------- #
 # 8. Concordance Analysis
@@ -291,17 +285,5 @@ table1(~ Confidence | out, loon_data,
        overall=F,
        caption="<b>Table 4:</b> FT Loon Lense Confidence Level by Human versus AI Concordance",
        footnote="<b>Chi-square test:</b> p < 0.0001")
-
-ggplot(loon_data, aes(x=Confidence, fill=out)) +
-  geom_bar(position="dodge") +
-  scale_fill_manual(values=c("#104862", "#008b8b")) + 
-  xlab("Confidence") + 
-  ylab("Articles (n)") + 
-  labs(title="**Figure 2:** Loon Lens Screening Concordance with Humans by Confidence Level at Full Text",
-       subtitle= "Human versus AI Concordance") +
-  scale_y_continuous(limits=c(0, 100), 
-                     breaks=seq(0, 100, 20)) +
-  theme_classic() +
-  theme(plot.title.position="plot")
   
 # End of Program #

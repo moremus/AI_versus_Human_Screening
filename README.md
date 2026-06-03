@@ -19,13 +19,11 @@ File contents are summarized below.
 2. Loon_Lens_Full_Text_Screening_Results.csv
 3. Loon_Lens_Title_Abstract_Screening_Results.csv
 
-These files contain the following information: article titles, authors, years of publication, journals, DOIs, included or excluded, reasons for inclusion or exclusion, and confidence level of inclusion/exclusion decisions (Loon Lens only)
+These files contain the following information: article titles, authors, years of publication, journals, DOIs, included or excluded, reasons for inclusion or exclusion, and confidence levels for inclusion/exclusion decisions (Loon Lens only)
 
 <br>
 
 ## R Programs
-
-This repository contains the following files:
 
 1. Confidence Concordance Regression: simple logistic regression of concordance on Loon Lens confidence scores;
 2. Deduplication Script: use of R's ASySD library to remove duplicate citations obtained in the literature search;

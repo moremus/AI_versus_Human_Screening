@@ -211,4 +211,10 @@ print("Saved: Figure_3.png")
 plt.show()
 ```
 
-### END OF PROGRAM ### the AI versus human screening project.
+<br>
+
+## Useful Links
+
+[Catchii](https://catchii.org)
+<br>
+[Loon Inc.](https://loonbio.com)

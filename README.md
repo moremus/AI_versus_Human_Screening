@@ -1,15 +1,22 @@
-# AI versus Human Screening GitHub Files
+# AI versus Human Screening
 
-<br>
+<img src="Images/Appendix_D.png" width="500">
 
 ## Overview
 
 This repository contains the following files:
 
+* Appendix D PNG file;
 * CSV files from the screening process; and
 * R programs
 
 File contents are summarized below.
+
+<br>
+
+## Appendix D
+
+1. Human-in-the-loop workflow .png file that is Appendix D in the manuscript (shown above)
 
 <br>
 
@@ -19,7 +26,7 @@ File contents are summarized below.
 2. Loon_Lens_Full_Text_Screening_Results.csv
 3. Loon_Lens_Title_Abstract_Screening_Results.csv
 
-These files contain the following information: article titles, authors, years of publication, journals, DOIs, included or excluded, reasons for inclusion or exclusion, and confidence levels for inclusion/exclusion decisions (Loon Lens only)
+These files contain the following information: article titles, authors, years of publication, journals, DOIs, whether the articles were included or excluded, reasons for inclusion or exclusion, and confidence levels for inclusion/exclusion decisions (Loon Lens only)
 
 <br>
 
@@ -32,19 +39,11 @@ These files contain the following information: article titles, authors, years of
 
 *Please note:* for title and abstract screening analyses, we utilized the same code as shown in the Full_Text_Screening_Comparison.R file.
 
+<br>
 
-Regular paragraph text here.
+## Python Code
 
-**Bold text**
-
-
-
-1. Numberedstep
-2. Another step
-
-[Link text](https://example.com)
-
-![Image alt text](path/to/image.png)
+This Python code generates Figure 3 from the manuscript.
 
 ```python
 # ============================================================

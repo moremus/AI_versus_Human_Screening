@@ -1,16 +1,7 @@
 # ============================================================
 #  Forest Plots – Figure 3 (Title & Abstract Screening)
 #  AI vs. Human Screening in Systematic Reviews
-#
-#  Layout: 3 plots stacked in one column
-#          Each plot has its own y-axis (full stat names)
-#          Shared x-axis at bottom only
-#          X-axis: 0.25 to 1.00 by 0.25
-#          Labels (est + 95% CI) above each whisker
-#          Boxes (point estimates) half-size
-#          Font: Arial throughout
 # ============================================================
-#
 #  Required packages:
 #    install.packages(c("ggplot2", "patchwork", "extrafont"))
 #    extrafont::font_import()   # run once
@@ -51,20 +42,20 @@ make_df <- function(est, lo, hi) {
 
 df_a <- make_df(
   est = c(0.50, 0.46, 0.93, 0.96, 0.52, 0.96, 0.49),
-  lo  = c(0.39, 0.34, 0.91, 0.94, 0.38, 0.95, 0.37),
-  hi  = c(0.61, 0.59, 0.94, 0.97, 0.66, 0.98, 0.63)
+  lo  = c(0.39, 0.34, 0.91, 0.94, 0.38, 0.95, 0.36),
+  hi  = c(0.60, 0.58, 0.94, 0.97, 0.65, 0.97, 0.62)
 )
 
 df_b <- make_df(
-  est = c(0.76, 0.75, 0.97, 0.97, 0.91, 1.00, 0.66),
-  lo  = c(0.66, 0.65, 0.96, 0.96, 0.81, 0.99, 0.54),
-  hi  = c(0.84, 0.84, 0.98, 0.98, 0.98, 1.00, 0.77)
+  est = c(0.76, 0.74, 0.97, 0.97, 0.91, 1.00, 0.66),
+  lo  = c(0.66, 0.63, 0.96, 0.96, 0.81, 0.99, 0.52),
+  hi  = c(0.84, 0.83, 0.98, 0.98, 0.98, 1.00, 0.78)
 )
 
 df_c <- make_df(
-  est = c(0.47, 0.44, 0.93, 0.96, 0.55, 0.97, 0.41),
-  lo  = c(0.34, 0.30, 0.91, 0.94, 0.39, 0.96, 0.29),
-  hi  = c(0.59, 0.56, 0.95, 0.97, 0.69, 0.98, 0.56)
+  est = c(0.47, 0.43, 0.93, 0.95, 0.55, 0.97, 0.41),
+  lo  = c(0.34, 0.30, 0.91, 0.94, 0.39, 0.96, 0.28),
+  hi  = c(0.59, 0.55, 0.95, 0.97, 0.70, 0.98, 0.55)
 )
 
 # ── 2. SHARED AXIS SETTINGS ─────────────────────────────────

@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{caption}
+\usepackage{geometry}
+\geometry{top=0.4in, bottom=0.4in, left=0.6in, right=0.6in, landscape}
+
+\definecolor{teal50}{RGB}{225,245,238}
+\definecolor{teal800}{RGB}{8,80,65}
+\definecolor{amber50}{RGB}{250,238,218}
+\definecolor{amber800}{RGB}{65,36,2}
+\definecolor{gray50}{RGB}{241,239,232}
+\definecolor{gray800}{RGB}{44,44,42}
+
+\begin{document}
+
+\begin{table}[ht]
+\centering
+\caption*{\textbf{Performance Statistics Obtained by Chance Alone}}
+
+\vspace{1.5em}
+
+%% -------------------------------------------------------
+%% ROW I
+%% -------------------------------------------------------
+
+\begin{minipage}[t]{0.45\textwidth}
+\centering
+\small\textbf{Catchii vs.\ Human --- TiAb}\\[0.6em]
+\begin{tabular}{lcc}
+    \toprule
+     & \multicolumn{2}{c}{\textbf{Human (Reference)}} \\
+    \cmidrule(lr){2-3}
+    \textbf{Catchii} & Included & Excluded \\
+    \midrule
+    Included &
+      \cellcolor{gray50}\textcolor{gray800}{0 (TP)} &
+      \cellcolor{gray50}\textcolor{gray800}{0 (FP)} \\
+    Excluded &
+      \cellcolor{amber50}\textcolor{amber800}{61 (FN)} &
+      \cellcolor{teal50}\textcolor{teal800}{732 (TN)} \\
+    \midrule
+    \multicolumn{3}{l}{\footnotesize Total = 793} \\
+    \multicolumn{3}{l}{\footnotesize Consistency = 0.92} \\
+    \multicolumn{3}{l}{\footnotesize Sensitivity = 0.00} \\
+    \multicolumn{3}{l}{\footnotesize Specificity = 1.00} \\
+    \multicolumn{3}{l}{\footnotesize F1 = 0.00 $\cdot$ Kappa = 0.00} \\
+    \bottomrule
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\centering
+\small\textbf{Loon Lens vs.\ Human --- TiAb}\\[0.6em]
+\begin{tabular}{lcc}
+    \toprule
+     & \multicolumn{2}{c}{\textbf{Human (Reference)}} \\
+    \cmidrule(lr){2-3}
+    \textbf{Loon Lens} & Included & Excluded \\
+    \midrule
+    Included &
+      \cellcolor{gray50}\textcolor{gray800}{0 (TP)} &
+      \cellcolor{gray50}\textcolor{gray800}{0 (FP)} \\
+    Excluded &
+      \cellcolor{amber50}\textcolor{amber800}{61 (FN)} &
+      \cellcolor{teal50}\textcolor{teal800}{732 (TN)} \\
+    \midrule
+    \multicolumn{3}{l}{\footnotesize Total = 793} \\
+    \multicolumn{3}{l}{\footnotesize Consistency = 0.92} \\
+    \multicolumn{3}{l}{\footnotesize Sensitivity = 0.00} \\
+    \multicolumn{3}{l}{\footnotesize Specificity = 1.00} \\
+    \multicolumn{3}{l}{\footnotesize F1 = 0.00 $\cdot$ Kappa = 0.00} \\
+    \bottomrule
+\end{tabular}
+\end{minipage}
+
+\vspace{4em}
+
+%% -------------------------------------------------------
+%% ROW II
+%% -------------------------------------------------------
+
+\begin{minipage}[t]{0.45\textwidth}
+\centering
+\small\textbf{Loon Lens vs.\ Catchii --- TiAb}\\[0.6em]
+\begin{tabular}{lcc}
+    \toprule
+     & \multicolumn{2}{c}{\textbf{Catchii (Reference)}} \\
+    \cmidrule(lr){2-3}
+    \textbf{Loon Lens} & Included & Excluded \\
+    \midrule
+    Included &
+      \cellcolor{gray50}\textcolor{gray800}{0 (TP)} &
+      \cellcolor{gray50}\textcolor{gray800}{0 (FP)} \\
+    Excluded &
+      \cellcolor{amber50}\textcolor{amber800}{58 (FN)} &
+      \cellcolor{teal50}\textcolor{teal800}{735 (TN)} \\
+    \midrule
+    \multicolumn{3}{l}{\footnotesize Total = 793} \\
+    \multicolumn{3}{l}{\footnotesize Consistency = 0.93} \\
+    \multicolumn{3}{l}{\footnotesize Sensitivity = 0.00} \\
+    \multicolumn{3}{l}{\footnotesize Specificity = 1.00} \\
+    \multicolumn{3}{l}{\footnotesize F1 = 0.00 $\cdot$ Kappa = 0.00} \\
+    \bottomrule
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\centering
+\small\textbf{Loon Lens vs.\ Human --- Full Text}\\[0.6em]
+\begin{tabular}{lcc}
+    \toprule
+     & \multicolumn{2}{c}{\textbf{Human (Reference)}} \\
+    \cmidrule(lr){2-3}
+    \textbf{Loon Lens} & Included & Excluded \\
+    \midrule
+    Included &
+      \cellcolor{gray50}\textcolor{gray800}{0 (TP)} &
+      \cellcolor{gray50}\textcolor{gray800}{0 (FP)} \\
+    Excluded &
+      \cellcolor{amber50}\textcolor{amber800}{41 (FN)} &
+      \cellcolor{teal50}\textcolor{teal800}{20 (TN)} \\
+    \midrule
+    \multicolumn{3}{l}{\footnotesize Total = 61} \\
+    \multicolumn{3}{l}{\footnotesize Consistency = 0.33} \\
+    \multicolumn{3}{l}{\footnotesize Sensitivity = 0.00} \\
+    \multicolumn{3}{l}{\footnotesize Specificity = 1.00} \\
+    \multicolumn{3}{l}{\footnotesize F1 = 0.00 $\cdot$ Kappa = 0.00} \\
+    \bottomrule
+\end{tabular}
+\end{minipage}
+
+\vspace{1.5em}
+\footnotesize
+\textit{Note.} TP = true positive; FP = false positive; FN = false negative; TN = true negative;
+TiAb = title and abstract screening; FT = full-text screening.
+
+\end{table}
+
+\end{document}

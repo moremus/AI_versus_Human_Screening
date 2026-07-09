@@ -1,12 +1,12 @@
 # AI versus Human Screening
 
-<img src="Images/Appendix_E.png" width="500">
+<img src="Images/Human_in_the_Loop.png" width="500">
 
 ## Overview
 
 This repository contains the following files:
 
-* Appendix E PNG file;
+* Human-in-the-Loop diagram;
 * CSV files from the screening process; and
 * R or Latex programs.
 

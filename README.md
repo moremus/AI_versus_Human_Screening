@@ -2,7 +2,7 @@
 
 <br>
 
-## Human in the Loop Diagram
+## Human-in-the-Loop Diagram
 <img src="Images/Human_in_the_Loop.png" width="500">
 
 <br>
